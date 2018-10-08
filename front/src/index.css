@@ -16,6 +16,7 @@ code {
 .nav-style ul {
   display: flex;
   list-style: none;
+  justify-content: center;
 }
 
 .nav-style li {

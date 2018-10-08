@@ -8,6 +8,7 @@ import Navbar from './components/navbar/Navbar';
 import Signup from './components/auth/Signup';
 import Login from './components/auth/Login';
 import AuthService from './components/auth/AuthService';
+import Contents from './components/contents/Contents'
 
 class App extends Component {
 
@@ -54,6 +55,7 @@ class App extends Component {
         <div className="App">
           <header className="App-header">
             <Navbar userInSession={this.state.loggedInUser} logout={this.logout} />
+            <Contents></Contents>
           </header>
         </div>
       );
