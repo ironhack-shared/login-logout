@@ -8,6 +8,10 @@ const passport = require('passport');
 const login = (req, user) => {
   return new Promise((resolve,reject) => {
     req.login(user, err => {
+      console.log('req.login ')
+      console.log(user)
+
+      
       if(err) {
         reject(new Error('Something went wrong'))
       }else{
@@ -22,6 +26,9 @@ const login = (req, user) => {
 router.post('/signup', (req, res, next) => {
 
   const {username, password} = req.body;
+
+  console.log('username', username)
+  console.log('password', password)
 
   // Check for non empty user or password
   if (!username || !password){
