@@ -15,12 +15,18 @@ class Navbar extends Component {
     this.setState({ ...this.state, loggedInUser: nextProps["userInSession"] })
   }
 
+  handleLogout = (e) => {
+    this.props.logout()
+  }
+
   render() {
+    console.log(this.props)
+
     if (this.state.loggedInUser) {
       return (
         <nav className="nav-style">
           <ul>
-            <li><button onClick={this.props.logout}>hacer logout</button></li>
+            <li><a onClick={this.handleLogout}>Logout</a></li>
           </ul>
 
           <h2>Welcome, {this.state.loggedInUser.username}</h2>

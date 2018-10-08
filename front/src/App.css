@@ -24,6 +24,11 @@
 
 a {
   color: white;
+  cursor: pointer;
+}
+
+fieldset {
+  border: 0;
 }
 
 @keyframes App-logo-spin {
