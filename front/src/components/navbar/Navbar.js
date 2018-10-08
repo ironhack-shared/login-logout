@@ -3,7 +3,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import AuthService from '../auth/AuthService';
-import { Redirect } from 'react-router'
 
 class Navbar extends Component {
   constructor(props) {
@@ -11,6 +10,7 @@ class Navbar extends Component {
     this.state = { loggedInUser: null };
     this.service = new AuthService();
   }
+
   componentWillReceiveProps(nextProps) {
     this.setState({ ...this.state, loggedInUser: nextProps["userInSession"] })
   }
@@ -20,8 +20,6 @@ class Navbar extends Component {
   }
 
   render() {
-    console.log(this.props)
-
     if (this.state.loggedInUser) {
       return (
         <nav className="nav-style">

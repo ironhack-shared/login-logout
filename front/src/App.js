@@ -7,7 +7,6 @@ import Navbar from './components/navbar/Navbar';
 // import ProjectDetails from './components/projects/ProjectDetails';
 import Signup from './components/auth/Signup';
 import Login from './components/auth/Login';
-import Logout from './components/auth/Logout';
 import AuthService from './components/auth/AuthService';
 
 class App extends Component {

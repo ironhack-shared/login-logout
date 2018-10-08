@@ -20,7 +20,7 @@ class Signup extends Component {
             username: "", 
             password: "",
         });
-        this.props.getUser(response)
+        this.props.getUser(response.user)
     })
     .catch( error => console.log(error) )
   }
